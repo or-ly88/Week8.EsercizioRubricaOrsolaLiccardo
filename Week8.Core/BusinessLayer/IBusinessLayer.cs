@@ -14,5 +14,6 @@ namespace Week8.Core.BusinessLayer
         Esito AddNuovoContatto(Contatto nuovoContatto);
         Esito AddNuovoIndirizzo(Indirizzo nuovoIndirizzo);
         Esito RimuoviIndirizzo(int id);
+        Esito RimuoviContatto(int id);
     }
 }

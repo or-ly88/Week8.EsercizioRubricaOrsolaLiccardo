@@ -15,6 +15,6 @@ namespace Week8.Core.InterfaceRepository
         public T Update(T item);
         public bool Delete(T item);
         Contatto GetByID(int ID);
-       
+        Indirizzo GetById(int ID);
     }
 }

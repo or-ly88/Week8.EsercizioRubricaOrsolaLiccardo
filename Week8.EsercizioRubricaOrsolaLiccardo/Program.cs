@@ -159,9 +159,14 @@ void VisualizzaIndirizzi()
     }
 }
 
-void EliminaContatto()
+void EliminaContatto(int ContattoID)
 {
-    throw new NotImplementedException();
+    
+    Console.WriteLine("Quale contatto vuoi eliminare? Inserisci l'ID: ");
+    int id = int.Parse(Console.ReadLine());
+
+    Esito esito = bl.RimuoviIndirizzo(id);
+    Console.WriteLine(esito.Messaggio);
 }
 
 void InserisciNuovoContatto()

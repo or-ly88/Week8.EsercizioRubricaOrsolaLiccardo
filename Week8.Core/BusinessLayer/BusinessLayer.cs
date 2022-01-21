@@ -60,5 +60,30 @@ namespace Week8.Core.BusinessLayer
         {
             throw new NotImplementedException();
         }
-    }
+
+
+        public Esito RimuoviContatto(int id)
+        {
+            var contattoRemove = contattiRepo.GetByID(id);
+            if (contattoRemove == null)
+            {
+                return new Esito { Messaggio = "Non esiste un contatto con questo ID", isOk = false };
+            }
+            else
+            {
+                List<Indirizzo> IndirizzoAssociatoAlContatto = indirizziRepo.GetById(ID);
+                if (IndirizzoAssociatoAlContatto.Count == 0)
+                {
+                    contattiRepo.Delete(contattoRemove);
+                    return new Esito { Messaggio = "Contatto eliminato", isOk = true };
+                }
+                else 
+                {
+                    return new Esito { Messaggio = "Il contatto non può essere eliminato", isOk = false };
+                }
+            }
+
+        }
+    }   
+
 }
