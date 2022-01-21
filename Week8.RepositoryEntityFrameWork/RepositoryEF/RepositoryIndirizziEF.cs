@@ -60,5 +60,10 @@ namespace Week8.RepositoryEntityFrameWork.RepositoryEF
             }
             return item;
         }
+
+        Contatto IRepository<Indirizzo>.GetByID(int ID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

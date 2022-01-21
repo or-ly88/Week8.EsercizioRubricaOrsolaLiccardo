@@ -25,7 +25,7 @@ namespace Week8.Core.Models
         //override del ToString
         public override string ToString()
         {
-            return $"{IndirizzoID} - {Tipologia} - {Via} - {Città} - {CAP} - {Provincia} - {Nazione} ";
+            return base.ToString() + $"{IndirizzoID} - {Tipologia} - {Via} - {Città} - {CAP} - {Provincia} - {Nazione} ";
 
         }
 

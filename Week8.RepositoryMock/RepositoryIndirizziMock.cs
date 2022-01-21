@@ -59,5 +59,10 @@ namespace Week8.RepositoryMock
             }
             return null;
         }
+
+        Contatto IRepository<Indirizzo>.GetByID(int ID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

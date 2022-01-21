@@ -16,12 +16,12 @@ namespace Week8.RepositoryEntityFrameWork.Configuration
             builder.ToTable("Contatto");
             builder.HasKey(k => k.ContattoID);
             builder.Property(n => n.Nome).HasMaxLength(30).IsRequired();
-            builder.Property(c => c.Cognome).HasColumnOrder(2).HasMaxLength(30).IsRequired();
+            builder.Property(c => c.Cognome).HasMaxLength(30).IsRequired();
 
            //Relazione 1 a molti tra contatto e indirizzi
-            builder.HasMany(i => i.Indirizzi).WithOne(c => c.Contatto);
+            builder.HasMany(i => i.Indirizzi).WithOne(c => c.Contatto).HasForeignKey(c => c.ContattoID); ;
 
-
+            
         }
     }
 }

@@ -38,9 +38,16 @@ namespace Week8.RepositoryMock
             return Contatti;
         }
 
+        
+
+        public Contatto GetById(int contattoID)
+        {
+            throw new NotImplementedException();
+        }
+
         public Contatto GetByID(int ID)
         {
-            
+            throw new NotImplementedException();
         }
 
         public Contatto Update(Contatto item)
